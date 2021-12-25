@@ -1,5 +1,6 @@
-import 'package:catelog/login.dart';
+import 'package:catelog/pages/login.dart';
 import 'package:catelog/pages/home_page.dart';
+import 'package:catelog/routes.dart';
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,9 +29,11 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         "/": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage(),
+        MyRoute.homeRoute: (context) => HomePage(),
+        MyRoute.loginRoute: (context) => LoginPage(),
       },
+      debugShowCheckedModeBanner:
+          false, // to remove the debug flag on the top right corner
     );
   }
 }
