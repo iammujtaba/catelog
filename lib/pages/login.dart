@@ -1,4 +1,4 @@
-import 'package:catelog/routes.dart';
+import 'package:catelog/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
