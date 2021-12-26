@@ -1,6 +1,7 @@
 import 'package:catelog/pages/login.dart';
 import 'package:catelog/pages/home_page.dart';
 import 'package:catelog/utils/routes.dart';
+import 'package:catelog/widgets/themes.dart';
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,17 +17,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Fultter First APP",
       // home: HomePage(), // either use this or use the routes below
-      theme: ThemeData(
-          primarySwatch: Colors.indigo,
-          fontFamily: GoogleFonts.lato().fontFamily,
-          primaryTextTheme: GoogleFonts.latoTextTheme()),
+      theme: MyTheme.lightTheme(context),
       themeMode: ThemeMode.light,
       // themeMode: ThemeMode.dark,
-      darkTheme: ThemeData(
-        brightness: Brightness.light, // properties for dark mode.
-        // brightness: Brightness.dark, // it overrides the themeMode.
-        primarySwatch: Colors.red,
-      ),
+      darkTheme: MyTheme.darkTheme(context),
       routes: {
         "/": (context) => HomePage(),
         MyRoute.homeRoute: (context) => HomePage(),
